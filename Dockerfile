@@ -14,12 +14,18 @@ RUN apk -U add \
         python3-dev \
         py-pip \
         curl \
-        ca-certificates \
-    && update-ca-certificates \
-    && pip install --upgrade pip \
-    && pip install scrapy-redis \
-    && apk -U del ${BUILD_DEPS} \
-    && rm -rf /var/cache/apk/*
+        ca-certificates
+        
+RUN pip install --upgrade pip
+
+RUN pip install scrapy
+
+RUN pip install Pillow
+
+RUN pip install scrapy-redis
+
+RUN apk -U del ${BUILD_DEPS} && rm -rf /var/cache/apk/*
+
 
 WORKDIR /runtime/app
 
