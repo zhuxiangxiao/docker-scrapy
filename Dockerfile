@@ -17,8 +17,6 @@ RUN apk -U add \
         ca-certificates \
     && update-ca-certificates \
     && pip install --upgrade pip \
-    && pip install Scrapy \
-    && pip install Pillow \
     && pip install scrapy-redis \
     && apk -U del ${BUILD_DEPS} \
     && rm -rf /var/cache/apk/*
