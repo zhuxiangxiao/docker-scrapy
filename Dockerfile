@@ -1,8 +1,9 @@
 FROM aciobanu/scrapy:latest
         
 RUN pip install --upgrade pip
-RUN pip install Pillow
+RUN pip install --upgrade scrapy
 RUN pip install scrapy-redis
+RUN pip install Pillow
 
 WORKDIR /runtime/app
 
