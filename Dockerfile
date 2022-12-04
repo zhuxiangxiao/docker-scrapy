@@ -2,6 +2,7 @@ FROM aciobanu/scrapy:latest
         
 RUN pip install --upgrade pip
 RUN pip install --upgrade scrapy
+RUN pip install distlib==0.3.6
 RUN pip install scrapy-redis
 RUN pip install Pillow
 
