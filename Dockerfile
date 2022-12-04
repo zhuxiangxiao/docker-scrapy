@@ -1,4 +1,4 @@
-FROM aciobanu/scrapy
+FROM aciobanu/scrapy:latest
         
 RUN pip install --upgrade pip
 RUN pip install Pillow
